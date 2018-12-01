@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 .DEFAULT_GOAL := help
 
-PROJECT := 01
+DAY := 01
 
 .PHONY: help
 help:  ## help target to show available commands with information
@@ -10,6 +10,10 @@ help:  ## help target to show available commands with information
 .PHONY: install-dependencies
 install-dependencies:  ## install python dependencies
 	pip install -r requirements.txt
+
+.PHONY: run
+run:
+	python src/day_$(DAY).py
 
 .PHONY: check
 check:  ## run linter

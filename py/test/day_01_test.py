@@ -1,3 +1,4 @@
+#!python
 from typing import List
 
 from ..src.day_01 import sum_array

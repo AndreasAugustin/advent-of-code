@@ -1,3 +1,4 @@
+#!python
 from typing import List
 
 _input: List[int] = [1, -2, 10]

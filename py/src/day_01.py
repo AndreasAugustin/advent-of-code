@@ -48,7 +48,8 @@ def first_duplicate(a: List):
 
 def sum_iterate(start: int, arr: List[int]) -> List[int]:
     """
-    sums all elements in the array iterative, returns array with the iterated values
+    sums all elements in the array iterative,
+    returns array with the iterated values
     last value is the actual sum
     :rtype: int
     :param arr:

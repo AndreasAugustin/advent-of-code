@@ -28,10 +28,10 @@ def main() -> int:
     frequency = 0
     while first_dupl is None:
         res = sum_iterate(frequency, _input)
-        tmp = res + tmp
+        tmp = tmp + res
         first_dupl = first_duplicate(tmp)
-        last_element = res[-1]
-        print(f"result is: {last_element}")
+        frequency = res[-1]
+        print(f"result is: {frequency}")
         print(f"first duplicate frequency: {first_dupl}")
 
     return 0

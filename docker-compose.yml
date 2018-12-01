@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+  py:
+    build:
+      context: ./py
+      dockerfile: Dockerfile
+    working_dir: /app

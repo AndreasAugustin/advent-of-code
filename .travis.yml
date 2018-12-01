@@ -15,4 +15,4 @@ script:
   - docker-compose build
   - docker-compose run py make install-dependencies
   - docker-compose run py make check
-  - docker-compose run py make test
+  - docker-compose run py make tests

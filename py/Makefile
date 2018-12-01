@@ -13,8 +13,8 @@ install-dependencies:  ## install python dependencies
 
 .PHONY: check
 check:  ## run linter
-	pylint src/ test/
+	pycodestyle src/ test/
 
 .PHONY: test
 test:  ## run the tests
-	py.test
+	py.test --cov=myproj tests/

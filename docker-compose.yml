@@ -1,8 +1,14 @@
 version: '3.3'
 
+volumes:
+  usr_local:
+
 services:
   py:
     build:
       context: ./py
       dockerfile: Dockerfile
     working_dir: /app
+    volumes:
+      - ./py/:/app/
+      - usr_local:/usr/local/

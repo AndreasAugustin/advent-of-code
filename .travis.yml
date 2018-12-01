@@ -13,5 +13,6 @@ before_install:
 
 script:
   - docker-compose build
-  #- docker-compose run test
-
+  - docker-compose run py make install-dependencies
+  - docker-compose run py make check
+  - docker-compose run py make test

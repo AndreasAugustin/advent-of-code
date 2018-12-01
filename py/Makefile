@@ -17,4 +17,4 @@ check:  ## run linter
 
 .PHONY: test
 test:  ## run the tests
-	python $(PROJECT)/main_test.py
+	py.test

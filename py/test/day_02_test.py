@@ -1,5 +1,6 @@
 #!python
-from ..src.day_02 import check_freq
+from ..src.day_02 import check_freq, has_exactly_two
+import logging
 
 
 def test_check_freq_1():
@@ -42,3 +43,10 @@ def test_check_freq_7():
     _input = "ababab"
     res = check_freq(_input)
     assert res == {"a": 3, "b": 3}
+
+
+def test_has_exactly_two(caplog):
+    caplog.set_level(logging.DEBUG)
+    _input = "abcdee"
+    res = has_exactly_two(_input)
+    assert res is True

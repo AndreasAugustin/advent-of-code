@@ -6,10 +6,10 @@ volumes:
 services:
   py:
     build:
-      context: ./py
+      context: python
       dockerfile: Dockerfile
     working_dir: /app
     volumes:
-      - ./py/:/app/
+      - ./python/:/app/
       - usr_local:/usr/local/
       - ./data/:/data/

@@ -1,5 +1,4 @@
 #!python
-from typing import List
 import pytest
 from ..src.day_01 import sum_iterate, file_lines_to_array, first_duplicate
 

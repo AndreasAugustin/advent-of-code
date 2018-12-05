@@ -2,7 +2,6 @@
 from typing import Dict, List, Optional
 import logging
 
-
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -85,19 +84,22 @@ def calc_hash(input_arr: List[str]) -> int:
            * count_of_three_equal_chars(input_arr)
 
 
-def differ_by_exactly_one_char_at_same_pos(input_arr: List[str]) -> Optional[List[List[str]]]:
+def differ_by_exactly_one_char_at_same_pos(input_arr: List[str]) \
+        -> Optional[List[List[str]]]:
     res = []
     if not input_arr:
         return res
     for i in range(len(input_arr)):
-        r = differ_by_exactly_one_char_at_same_pos_for(input_arr.pop(0), input_arr)
+        r = differ_by_exactly_one_char_at_same_pos_for(
+            input_arr.pop(0), input_arr)
         if r:
             res.append(r)
 
     return res
 
 
-def differ_by_exactly_one_char_at_same_pos_for(comp: str, input_arr: List[str]) -> List[str]:
+def differ_by_exactly_one_char_at_same_pos_for(
+        comp: str, input_arr: List[str]) -> List[str]:
     res = []
     for s in input_arr:
         dif = 0

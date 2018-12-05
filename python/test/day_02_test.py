@@ -29,19 +29,19 @@ def test_check_freq(_input, _exp):
 
 
 @pytest.mark.parametrize("_input, _exp", [
-                            ["abcdee", True],
-                            ["ababab", False],
-                            ["abcdefg", False]
-                        ])
+    ["abcdee", True],
+    ["ababab", False],
+    ["abcdefg", False]
+])
 def test_has_two_equal_chars(_input, _exp):
     res = has_two_equal_chars(_input)
     assert res is _exp
 
 
 @pytest.mark.parametrize("_input, _exp", [
-                            ["ababab", True],
-                            ["aaabcd", True]
-                        ])
+    ["ababab", True],
+    ["aaabcd", True]
+])
 def test_has_three_equal_chars(_input, _exp):
     res = has_three_equal_chars(_input)
     assert res is _exp
@@ -78,4 +78,3 @@ def test_common_letters():
     res = common_letters(_input1, _input2)
     _exp = "fgij"
     assert res == _exp
-

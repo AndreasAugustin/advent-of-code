@@ -1,5 +1,5 @@
 #!python
-from typing import Dict, List
+from typing import Dict, List, Optional
 import logging
 
 
@@ -75,6 +75,32 @@ def count_of_three_equal_chars(input_arr: List[str]) -> int:
 def calc_hash(input_arr: List[str]) -> int:
     return count_of_two_equal_chars(input_arr) \
            * count_of_three_equal_chars(input_arr)
+
+
+def differ_by_exactly_one_char_at_same_pos(input_arr: List[str]) -> Optional[List[List[str]]]:
+    res = []
+    if not input_arr:
+        return res
+    for i in range(len(input_arr) - 1):
+        r = differ_by_exactly_one_char_at_same_pos_for(input_arr.pop(0), input_arr)
+        if r:
+            res.append(r)
+
+    return res
+
+
+def differ_by_exactly_one_char_at_same_pos_for(comp: str, input_arr: List[str]) -> List[str]:
+    res = []
+    for s in input_arr:
+        dif = 0
+        for i in range(len(comp) - 1):
+            if s[i] != comp[i]:
+                dif += 1
+        if dif == 1:
+            res.append(s)
+    if res:
+        res.append(comp)
+    return res
 
 
 if __name__ == "__main__":

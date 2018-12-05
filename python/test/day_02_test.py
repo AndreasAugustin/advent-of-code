@@ -4,7 +4,7 @@ import pytest
 from ..src.day_02 import check_freq, has_two_equal_chars, \
     has_three_equal_chars, file_lines_to_array, \
     count_of_three_equal_chars, count_of_two_equal_chars, \
-    calc_hash
+    calc_hash, differ_by_exactly_one_char_at_same_pos
 
 import os
 
@@ -63,3 +63,10 @@ def test_calc_hash():
     data_arr = file_lines_to_array(data_file)
     res = calc_hash(data_arr)
     assert res == 12
+
+
+def test_differ_by_exactly_one_char_at_same_pos():
+    _input = ["abcde", "fghij", "klmno", "pqrst", "fguij", "axcye", "wvxyz"]
+    res = differ_by_exactly_one_char_at_same_pos(_input)
+    _exp = [["fguij", "fghij"]]
+    assert res == _exp

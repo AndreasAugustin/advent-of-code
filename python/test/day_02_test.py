@@ -4,7 +4,7 @@ import pytest
 from ..src.day_02 import check_freq, has_two_equal_chars, \
     has_three_equal_chars, file_lines_to_array, \
     count_of_three_equal_chars, count_of_two_equal_chars, \
-    calc_hash, differ_by_exactly_one_char_at_same_pos
+    calc_hash, differ_by_exactly_one_char_at_same_pos, common_letters
 
 import os
 
@@ -70,3 +70,12 @@ def test_differ_by_exactly_one_char_at_same_pos():
     res = differ_by_exactly_one_char_at_same_pos(_input)
     _exp = [["fguij", "fghij"]]
     assert res == _exp
+
+
+def test_common_letters():
+    _input1 = "fguij"
+    _input2 = "fghij"
+    res = common_letters(_input1, _input2)
+    _exp = "fgij"
+    assert res == _exp
+

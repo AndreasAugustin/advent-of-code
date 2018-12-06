@@ -2,16 +2,10 @@
 from typing import Dict, List, Optional
 import logging
 
+from .util import file_lines_to_array
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-
-
-def file_lines_to_array(file_path: str) -> List[str]:
-    fh = open(file_path)
-    x = [str(i) for i in fh.readlines()]
-
-    fh.close()
-    return x
 
 
 def main() -> int:

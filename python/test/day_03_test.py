@@ -1,7 +1,7 @@
 #!python
 
 import pytest
-from ..src.day_03 import Claim, claim_fact
+from ..src.day_03 import Claim, claim_fact, claims_fact, file_lines_to_array
 
 import os
 
@@ -25,4 +25,15 @@ def test_init_claim():
                          ])
 def test_claim_fact(_hash, _exp):
     res = claim_fact(_hash)
+    assert res == _exp
+
+
+def test_claim_fact_read():
+    _in = file_lines_to_array(data_file)
+    res = claims_fact(_in)
+    _exp = [
+        Claim(1, 1, 3, 4, 4),
+        Claim(2, 3, 1, 4, 4),
+        Claim(3, 5, 5, 2, 2)
+    ]
     assert res == _exp

@@ -3,7 +3,7 @@ import re
 import logging
 from attr import dataclass
 
-from .util import file_lines_to_array
+from util import file_lines_to_array
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

@@ -2,7 +2,7 @@
 from typing import Dict, List, Optional
 import logging
 
-from .util import file_lines_to_array
+from util import file_lines_to_array
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

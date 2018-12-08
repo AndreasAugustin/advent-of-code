@@ -1,6 +1,6 @@
 #!python
 from typing import List
-from .util import file_lines_to_int_array
+from util import file_lines_to_int_array
 
 
 def main() -> int:

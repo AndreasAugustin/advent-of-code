@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 .DEFAULT_GOAL := help
 
-DAY := 02
+DAY := 03
 
 .PHONY: help
 help:  ## help target to show available commands with information
@@ -12,7 +12,7 @@ install-dependencies:  ## install python dependencies
 	pip install -r requirements.txt
 
 .PHONY: run
-run:
+run:  ## run the day set in main.py
 	python src/day_$(DAY).py
 
 .PHONY: check

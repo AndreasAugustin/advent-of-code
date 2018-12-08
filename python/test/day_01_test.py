@@ -26,6 +26,3 @@ def test_first_duplicate(dup_input, dup_exp):
 def test_sum_iterate(it_input, it_exp):
     res = sum_iterate(0, it_input)
     assert res[-1] == it_exp
-
-
-

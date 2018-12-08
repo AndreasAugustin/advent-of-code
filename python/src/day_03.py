@@ -1,12 +1,14 @@
 #!python
 import re
 import logging
-
 from attr import dataclass
+
 from .util import file_lines_to_array
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+
+MAX_FABRIC_INCHES = 1000
 
 
 def main() -> int:
@@ -16,15 +18,57 @@ def main() -> int:
     data_file = \
         os.path.join(script_directory, '..', '..', 'data', 'day_03_input.csv')
     _input = file_lines_to_array(data_file)
+
+    claims = claims_fact(_input)
+    logger.info(f"got claims with size: {len(claims)}")
+
+    fab = Fabric()
+    fab.add_claims(claims)
+    often = fab.get_often_entries()
+    logger.info(f"got often with size: {len(often)}")
+
     return 0
+
 
 @dataclass
 class Claim:
     id: int
     left_inches: int
-    right_inches: int
+    top_inches: int
     width: int
     height: int
+
+
+class Fabric:
+
+    def __init__(self, dim: int = MAX_FABRIC_INCHES):
+        self._dim = dim
+        self._m = []
+        for i in range(dim):
+            self._m.append([])
+            mi = self._m[i]
+            for j in range(dim):
+                mi.append([])
+
+    def add_claim(self, claim: Claim):
+        for w in range(claim.width):
+            for h in range(claim.height):
+                sq = self._m[claim.left_inches + w]
+                sq[claim.top_inches + h].append(claim.id)
+
+    def add_claims(self, claims: [Claim]):
+        for claim in claims:
+            self.add_claim(claim)
+
+    def get_often_entries(self) -> [[int]]:
+        res = []
+        for i in range(self._dim):
+            for j in range(self._dim):
+                v = self._m[i][j]
+                if v:
+                    if len(v) > 1:
+                        res.append(v)
+        return res
 
 
 def claim_fact(input_hash: str) -> Claim:

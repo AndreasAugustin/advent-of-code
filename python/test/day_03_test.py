@@ -1,7 +1,7 @@
 #!python
 
 import pytest
-from ..src.day_03 import Claim, claim_fact, claims_fact, file_lines_to_array
+from ..src.day_03 import Claim, claim_fact, claims_fact, file_lines_to_array, Fabric
 
 import os
 
@@ -13,7 +13,7 @@ def test_init_claim():
     claim = Claim(0, 1, 2, 3, 4)
     assert claim.id == 0
     assert claim.left_inches == 1
-    assert claim.right_inches == 2
+    assert claim.top_inches == 2
     assert claim.width == 3
     assert claim.height == 4
 
@@ -37,3 +37,11 @@ def test_claim_fact_read():
         Claim(3, 5, 5, 2, 2)
     ]
     assert res == _exp
+
+
+def test_fabric_get_often_entries():
+    claims = claims_fact(file_lines_to_array(data_file))
+    fab = Fabric(10)
+    fab.add_claims(claims)
+    res = fab.get_often_entries()
+    assert len(res) == 4

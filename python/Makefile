@@ -21,7 +21,7 @@ build:  ## builds the project locally
 
 .PHONY: run
 run:  ## run the day set in main.py
-	python src/day_$(DAY).py
+	python src/__init__.py $(DAY)
 
 .PHONY: check
 check:  ## run linter

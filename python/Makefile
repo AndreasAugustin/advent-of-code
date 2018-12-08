@@ -11,6 +11,14 @@ help:  ## help target to show available commands with information
 install-dependencies:  ## install python dependencies
 	pip install -r requirements.txt
 
+.PHONY: clean
+clean:  ## cleans the project locally
+	python setup,py clean
+
+.PHONY: build
+build:  ## builds the project locally
+	python setup,py build
+
 .PHONY: run
 run:  ## run the day set in main.py
 	python src/day_$(DAY).py

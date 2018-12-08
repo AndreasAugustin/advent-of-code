@@ -2,7 +2,7 @@
 
 import pytest
 from day_02 import check_freq, has_two_equal_chars, \
-    has_three_equal_chars, file_lines_to_array, \
+    has_three_equal_chars, util, \
     count_of_three_equal_chars, count_of_two_equal_chars, \
     calc_hash, differ_by_exactly_one_char_at_same_pos, common_letters
 
@@ -48,19 +48,19 @@ def test_has_three_equal_chars(_input, _exp):
 
 
 def test_count_has_two_equal_chars():
-    data_arr = file_lines_to_array(data_file)
+    data_arr = util.file_lines_to_array(data_file)
     res = count_of_two_equal_chars(data_arr)
     assert res == 4
 
 
 def test_count_has_three_equal_chars():
-    data_arr = file_lines_to_array(data_file)
+    data_arr = util.file_lines_to_array(data_file)
     res = count_of_three_equal_chars(data_arr)
     assert res == 3
 
 
 def test_calc_hash():
-    data_arr = file_lines_to_array(data_file)
+    data_arr = util.file_lines_to_array(data_file)
     res = calc_hash(data_arr)
     assert res == 12
 

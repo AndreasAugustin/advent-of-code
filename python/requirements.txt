@@ -1,3 +1,4 @@
+setuptools
 attr
 pycodestyle
 pytest

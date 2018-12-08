@@ -1,7 +1,7 @@
 #!python
 
 import pytest
-from day_03 import Claim, claim_fact, claims_fact, file_lines_to_array, Fabric
+from day_03 import *
 
 import os
 
@@ -18,6 +18,17 @@ def test_init_claim():
     assert claim.height == 4
 
 
+def test_claim_fact_read():
+    _in = util.file_lines_to_array(data_file)
+    res = claims_fact(_in)
+    _exp = [
+        Claim(1, 1, 3, 4, 4),
+        Claim(2, 3, 1, 4, 4),
+        Claim(3, 5, 5, 2, 2)
+    ]
+    assert res == _exp
+
+
 @pytest.mark.parametrize('_hash, _exp',
                          [
                              ["#2 @ 3,1: 4x4", Claim(2, 3, 1, 4, 4)],
@@ -28,19 +39,8 @@ def test_claim_fact(_hash, _exp):
     assert res == _exp
 
 
-def test_claim_fact_read():
-    _in = file_lines_to_array(data_file)
-    res = claims_fact(_in)
-    _exp = [
-        Claim(1, 1, 3, 4, 4),
-        Claim(2, 3, 1, 4, 4),
-        Claim(3, 5, 5, 2, 2)
-    ]
-    assert res == _exp
-
-
 def test_fabric_get_often_entries():
-    claims = claims_fact(file_lines_to_array(data_file))
+    claims = claims_fact(util.file_lines_to_array(data_file))
     fab = Fabric(10)
     fab.add_claims(claims)
     res = fab.get_often_entries()

@@ -1,6 +1,6 @@
 #!python
 import pytest
-from ..src.day_01 import sum_iterate, file_lines_to_int_array, first_duplicate
+from day_01 import sum_iterate, file_lines_to_int_array, first_duplicate
 
 import os
 

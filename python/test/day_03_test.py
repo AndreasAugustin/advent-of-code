@@ -1,7 +1,7 @@
 #!python
 
 import pytest
-from ..src.day_03 import Claim, claim_fact, claims_fact, file_lines_to_array, Fabric
+from day_03 import Claim, claim_fact, claims_fact, file_lines_to_array, Fabric
 
 import os
 

@@ -1,8 +1,8 @@
 #!python
 from typing import Dict, List, Optional
 import logging
+import util
 
-from util import file_lines_to_array
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -14,9 +14,9 @@ def main() -> int:
     script_directory = os.path.dirname(os.path.realpath(__file__))
     data_file = \
         os.path.join(script_directory, '..', '..', 'data', 'day_02_input.csv')
-    _input = file_lines_to_array(data_file)
+    _input = util.file_lines_to_array(data_file)
 
-    input_arr = file_lines_to_array(data_file)
+    input_arr = util.file_lines_to_array(data_file)
 
     calculated_hash = calc_hash(input_arr)
 

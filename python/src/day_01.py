@@ -1,6 +1,6 @@
 #!python
 from typing import List
-from util import file_lines_to_int_array
+import util
 
 
 def main() -> int:
@@ -14,7 +14,7 @@ def main() -> int:
     script_directory = os.path.dirname(os.path.realpath(__file__))
     data_file = \
         os.path.join(script_directory, '..', '..', 'data', 'day_01_input.csv')
-    _input = file_lines_to_int_array(data_file)
+    _input = util.file_lines_to_int_array(data_file)
 
     first_dupl = None
     tmp = []
@@ -44,6 +44,7 @@ def sum_iterate(start: int, arr: List[int]) -> List[int]:
     sums all elements in the array iterative,
     returns array with the iterated values
     last value is the actual sum
+    :param start:
     :rtype: int
     :param arr:
     :return:

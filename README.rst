@@ -1,30 +1,38 @@
-# advent-of-code
+advent-of-code
+==============
 
 [Advent of code](https://adventofcode.com/)
 
-## CI
+CI
+--
 
 Travis build
 
 [![Build Status](https://travis-ci.org/AndreasAugustin/advent-of-code.svg?branch=master)](https://travis-ci.org/AndreasAugustin/advent-of-code)
 
-## Make
+Make
+----
 
 Most development commands are available in `Makefile`.
 
-```bash
-$ make help
-```
+.. code-block:: bash
 
-## Starting a Docker session
+    $ make help
+
+Starting a Docker session
+-------------------------
 
 You can start a shell to work in a Docker container with the following make command
 
-`$ make shell`
+.. code-block:: bash
+
+    $ make shell
 
 This will start a shell in the container. The container also supports TMUX to run a session multiplexer with
 
-`$ make tmux`
+.. code-block:: bash
+
+    $ make tmux
 
 This will start a tmux session so you can create multiple windows in the same docker container.
 This is especially helpful if you want to run your backend application in one window and have a

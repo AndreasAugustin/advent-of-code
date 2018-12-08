@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 .DEFAULT_GOAL := help
 
-DAY := 03
+DAY := 02
 
 .PHONY: help
 help:  ## help target to show available commands with information

@@ -2,8 +2,7 @@
 import re
 import logging
 from attr import dataclass
-
-from util import file_lines_to_array
+import util
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -17,7 +16,7 @@ def main() -> int:
     script_directory = os.path.dirname(os.path.realpath(__file__))
     data_file = \
         os.path.join(script_directory, '..', '..', 'data', 'day_03_input.csv')
-    _input = file_lines_to_array(data_file)
+    _input = util.file_lines_to_array(data_file)
 
     claims = claims_fact(_input)
     logger.info(f"got claims with size: {len(claims)}")

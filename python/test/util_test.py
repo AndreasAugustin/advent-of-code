@@ -2,7 +2,7 @@
 
 import os
 
-from ..src.util import file_lines_to_array, file_lines_to_int_array
+from util import file_lines_to_array, file_lines_to_int_array
 
 script_directory = os.path.dirname(os.path.realpath(__file__))
 data_file = os.path.join(script_directory, 'data', 'day_01_input.csv')

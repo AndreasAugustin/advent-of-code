@@ -19,7 +19,7 @@ setup(
     keywords="advent-of-code python",
     license="MIT",
     url="https://github.com/AndreasAugustin/advent-of-code",
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    packages=find_packages(exclude=['contrib', 'docs']),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: AdventOfCode",
@@ -38,5 +38,4 @@ setup(
         'Source': 'https://github.com/AndreasAugustin/advent-of-code"',
     },
     package_data={'data': ['../data/*']},
-    #data_files=['../data/*']
 )

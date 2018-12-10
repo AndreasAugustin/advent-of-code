@@ -19,9 +19,7 @@ setup(
     keywords="advent-of-code python",
     license="MIT",
     url="https://github.com/AndreasAugustin/advent-of-code",
-    packages=find_packages('aoc'),
-    package_dir={'': 'aoc'},
-    py_modules=[splitext(basename(path))[0] for path in glob('aoc/*.py')],
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: AdventOfCode",
@@ -31,7 +29,14 @@ setup(
     tests_require=["pytest"],
     entry_points={
           'console_scripts': [
-              'aoc = aoc.__main__:main'
+              'aoc = aoc:main'
           ]
     },
+    install_requires=['argparse', 'attr', 'importlib'],
+    project_urls={
+        'Advent of code': 'https://adventofcode.com/',
+        'Source': 'https://github.com/AndreasAugustin/advent-of-code"',
+    },
+    package_data={'data': ['../data/*']},
+    #data_files=['../data/*']
 )

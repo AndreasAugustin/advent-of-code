@@ -8,7 +8,7 @@ def main() -> int:
     import os
     script_directory = os.path.dirname(os.path.realpath(__file__))
     data_file = \
-        os.path.join(script_directory, '..', '..', '..', 'data', 'day_01_input.csv')
+        os.path.join(script_directory, '..', '..', 'data', 'day_01_input.csv')
     _input = util.file_lines_to_int_array(data_file)
 
     first_dupl = None

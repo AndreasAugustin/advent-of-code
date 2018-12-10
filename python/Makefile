@@ -7,9 +7,9 @@ DAY := 3
 help:  ## help target to show available commands with information
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) |  awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: install-dependencies
-install-dependencies:  ## install python dependencies
-	pip install -r requirements.txt
+.PHONY: install-requirements
+install-requirements:  ## install python requirements
+	pip3 install -r requirements.txt
 
 .PHONY: clean
 clean:  ## cleans the project locally
@@ -21,7 +21,7 @@ build:  ## builds the project locally
 
 .PHONY: run
 run: build  ## run the day set in main.py
-	python3 build/lib/__init__.py $(DAY)
+	python3 build/lib/__main__.py $(DAY)
 
 .PHONY: check
 check:  ## run linter

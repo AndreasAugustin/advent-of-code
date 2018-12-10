@@ -12,7 +12,7 @@ def main() -> int:
     import os
     script_directory = os.path.dirname(os.path.realpath(__file__))
     data_file = \
-        os.path.join(script_directory, '..', '..', '..', 'data', 'day_02_input.csv')
+        os.path.join(script_directory, '..', '..', 'data', 'day_02_input.csv')
 
     input_arr = util.file_lines_to_array(data_file)
 

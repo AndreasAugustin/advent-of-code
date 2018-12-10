@@ -15,7 +15,7 @@ def main() -> int:
     import os
     script_directory = os.path.dirname(os.path.realpath(__file__))
     data_file = \
-        os.path.join(script_directory, '..', '..', '..', 'data', 'day_03_input.csv')
+        os.path.join(script_directory, '..', '..', 'data', 'day_03_input.csv')
     _input = util.file_lines_to_array(data_file)
 
     claims = claims_fact(_input)

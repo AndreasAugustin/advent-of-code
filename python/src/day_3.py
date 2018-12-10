@@ -79,4 +79,3 @@ def claim_fact(input_hash: str) -> Claim:
 
 def claims_fact(input_hash: [str]) -> [Claim]:
     return list(map(lambda x: claim_fact(x), input_hash))
-

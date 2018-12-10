@@ -14,5 +14,3 @@ if __name__ == '__main__':
     print(f"Advent of code day {day}")
     mod = __import__(f'day_{day}')
     mod.main()
-
-

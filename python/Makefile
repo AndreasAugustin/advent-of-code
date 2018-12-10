@@ -21,7 +21,7 @@ build:  ## builds the project locally
 
 .PHONY: run
 run:  ## run the day set in main.py
-	python3 src/aoc/__init__.py $(DAY)
+	python3 src/__init__.py $(DAY)
 
 .PHONY: check
 check:  ## run linter
@@ -29,7 +29,7 @@ check:  ## run linter
 
 .PHONY: test
 test:  ## run the tests
-	python3 setup.py test
+	python3 setup.py pytest
 
 .PHONY: install
 install: build  test ## install the lib

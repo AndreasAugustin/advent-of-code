@@ -4,3 +4,4 @@ attr
 pycodestyle
 pytest
 pytest-cov
+tox

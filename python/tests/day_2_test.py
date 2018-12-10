@@ -1,10 +1,10 @@
 #!python
 
 import pytest
-from day_2 import check_freq, has_two_equal_chars, \
+from src.day_2 import check_freq, has_two_equal_chars, \
     has_three_equal_chars, count_of_three_equal_chars, count_of_two_equal_chars, \
     calc_hash, differ_by_exactly_one_char_at_same_pos, common_letters
-import util
+from src import util
 
 import os
 

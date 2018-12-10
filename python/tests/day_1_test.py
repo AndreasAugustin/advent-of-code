@@ -1,7 +1,7 @@
 #!python
 import pytest
-from day_1 import sum_iterate, first_duplicate
-import util
+from src.day_1 import sum_iterate, first_duplicate
+from src import util
 
 import os
 

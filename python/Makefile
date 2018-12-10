@@ -32,5 +32,9 @@ test:  ## run the tests
 	python3 setup.py test
 
 .PHONY: install
-install: build  ## install the lib
+install: build  test ## install the lib
 	python3 setup.py install
+
+.PHONY: package
+package: build test ## build package
+	python3 setup.py sdist

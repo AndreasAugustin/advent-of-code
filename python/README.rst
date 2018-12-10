@@ -2,10 +2,10 @@ python
 ======
 
 Commands
---------
+########
 
 Help
-^^^^
+****
 
 .. code-block:: bash
 
@@ -13,7 +13,7 @@ Help
 
 
 Dependencies
-^^^^^^^^^^^^
+************
 
 .. code-block:: bash
 
@@ -21,16 +21,38 @@ Dependencies
 
 
 Check
-^^^^^
+*****
 
 .. code-block:: bash
 
     $ make check
 
 Test
-^^^^
+****
+
+pytest
+^^^^^^
 
 .. code-block:: bash
 
     $ make test
 
+other pythonversions
+^^^^^^^^^^^^^^^^^^^^
+
+install and packaging
+*********************
+
+package
+^^^^^^^
+
+.. code-block:: bash
+
+    $ make package
+
+install
+^^^^^^^
+
+.. code-block:: bash
+
+    $ make install

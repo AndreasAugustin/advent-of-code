@@ -20,8 +20,8 @@ build:  ## builds the project locally
 	python3 setup.py build
 
 .PHONY: run
-run:  ## run the day set in main.py
-	python3 src/__init__.py $(DAY)
+run: build  ## run the day set in main.py
+	python3 build/lib/__init__.py $(DAY)
 
 .PHONY: check
 check:  ## run linter

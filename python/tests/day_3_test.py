@@ -1,7 +1,7 @@
 #!python
 
 import pytest
-from src.day_3 import *
+from aoc.day_3 import *
 
 import os
 

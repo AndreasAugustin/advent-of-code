@@ -1,6 +1,6 @@
 #!python
 from typing import List
-from src import util
+from aoc import util
 
 
 def main() -> int:

@@ -2,7 +2,7 @@
 import re
 import logging
 from attr import dataclass
-from src import util
+from aoc import util
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

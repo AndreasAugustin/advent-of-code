@@ -11,11 +11,11 @@ MAX_FABRIC_INCHES = 1000
 
 
 def main() -> int:
-    logger.info("Advent of code day 03")
+    logger.info("sfd Advent of code day 03")
     import os
     script_directory = os.path.dirname(os.path.realpath(__file__))
     data_file = \
-        os.path.join(script_directory, '..', '..', 'data', 'day_03_input.csv')
+        os.path.join(script_directory, '..', '..', '..', 'data', 'day_03_input.csv')
     _input = util.file_lines_to_array(data_file)
 
     claims = claims_fact(_input)
@@ -80,6 +80,3 @@ def claim_fact(input_hash: str) -> Claim:
 def claims_fact(input_hash: [str]) -> [Claim]:
     return list(map(lambda x: claim_fact(x), input_hash))
 
-
-if __name__ == "__main__":
-    main()

@@ -1,7 +1,7 @@
 #!python
 
 import pytest
-from day_03 import *
+from day_3 import *
 
 import os
 

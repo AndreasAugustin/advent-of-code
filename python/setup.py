@@ -1,5 +1,8 @@
 import os
-from setuptools import setup
+from os.path import basename
+from os.path import splitext
+from glob import glob
+from setuptools import setup, find_packages
 
 
 def read(fname):
@@ -12,14 +15,18 @@ setup(
     author="Andrew Augustin",
     author_email="todo@todo.io",
     description="Fun coding with advent of code",
-    license="MIT",
-    keywords="advent-of-code python",
-    url="https://github.com/AndreasAugustin/advent-of-code",
-    packages=['src', 'test'],
     long_description=read('README.rst'),
+    keywords="advent-of-code python",
+    license="MIT",
+    url="https://github.com/AndreasAugustin/advent-of-code",
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
+    py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: AdventOfCode",
         "License :: MIT ",
     ],
 )
+
+

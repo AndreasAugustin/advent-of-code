@@ -1,3 +1,6 @@
 .pytest_cache/
 .coverage
 test/__pycache__/
+build/
+dist/
+src/advent_of_code_2018.egg-info/

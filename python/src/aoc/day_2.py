@@ -3,7 +3,6 @@ from typing import Dict, List, Optional
 import logging
 import util
 
-
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -13,8 +12,7 @@ def main() -> int:
     import os
     script_directory = os.path.dirname(os.path.realpath(__file__))
     data_file = \
-        os.path.join(script_directory, '..', '..', 'data', 'day_02_input.csv')
-    _input = util.file_lines_to_array(data_file)
+        os.path.join(script_directory, '..', '..', '..', 'data', 'day_02_input.csv')
 
     input_arr = util.file_lines_to_array(data_file)
 
@@ -118,7 +116,3 @@ def common_letters(_input1: str, _input2: str) -> str:
             res.append(_input1[i])
 
     return "".join(res)
-
-
-if __name__ == "__main__":
-    main()

@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 .DEFAULT_GOAL := help
 
-DAY := 02
+DAY := 3
 
 .PHONY: help
 help:  ## help target to show available commands with information
@@ -13,15 +13,15 @@ install-dependencies:  ## install python dependencies
 
 .PHONY: clean
 clean:  ## cleans the project locally
-	python setup,py clean
+	python3 setup,py clean
 
 .PHONY: build
 build:  ## builds the project locally
-	python setup,py build
+	python3 setup.py build
 
 .PHONY: run
 run:  ## run the day set in main.py
-	python src/__init__.py $(DAY)
+	python3 src/aoc/__init__.py $(DAY)
 
 .PHONY: check
 check:  ## run linter
@@ -29,4 +29,8 @@ check:  ## run linter
 
 .PHONY: test
 test:  ## run the tests
-	py.test --cov
+	python3 setup.py test
+
+.PHONY: install
+install: build  ## install the lib
+	python3 setup.py install

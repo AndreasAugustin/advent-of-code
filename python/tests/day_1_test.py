@@ -1,6 +1,7 @@
 #!python
 import pytest
-from day_01 import sum_iterate, util, first_duplicate
+from day_1 import sum_iterate, first_duplicate
+import util
 
 import os
 

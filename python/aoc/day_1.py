@@ -1,6 +1,10 @@
 #!python
 from typing import List
 import util
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 def main() -> int:
@@ -19,8 +23,8 @@ def main() -> int:
         tmp = tmp + res
         first_dupl = first_duplicate(tmp)
         frequency = res[-1]
-        print(f"result is: {frequency}")
-        print(f"first duplicate frequency: {first_dupl}")
+        logging.info(f"result is: {frequency}")
+        logging.info(f"first duplicate frequency: {first_dupl}")
 
     return 0
 

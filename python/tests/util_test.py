@@ -2,7 +2,7 @@
 
 import os
 
-from aoc import util
+import util
 
 script_directory = os.path.dirname(os.path.realpath(__file__))
 data_file = os.path.join(script_directory, 'data', 'day_01_input.csv')

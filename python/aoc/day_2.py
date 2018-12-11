@@ -1,7 +1,7 @@
 #!python
 from typing import Dict, List, Optional
 import logging
-from aoc import util
+import util
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

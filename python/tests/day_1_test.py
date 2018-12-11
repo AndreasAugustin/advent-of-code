@@ -1,7 +1,7 @@
 #!python
 import pytest
 from aoc.day_1 import sum_iterate, first_duplicate
-from aoc import util
+import util
 
 import os
 

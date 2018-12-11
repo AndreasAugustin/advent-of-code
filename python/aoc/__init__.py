@@ -1,4 +1,5 @@
 import importlib
+#import day_3
 
 
 def main():
@@ -14,10 +15,10 @@ def main():
     args = parser.parse_args()
     day: int = args.day
     print(f"Advent of code day {day}")
-    mod = importlib.import_module(f'day_{day}', 'aoc')
-    print(mod)
+    mod = __import__(f'day_{day}')
+    #mod = importlib.import_module(f'day_{day}', 'aoc')
+    #mod.main()
     mod.main()
-
 
 if __name__ == '__main__':
     main()

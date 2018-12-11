@@ -1,8 +1,9 @@
 #!python
 
 import pytest
-from aoc.day_3 import *
 
+from aoc.day_3 import Claim, claims_fact, claim_fact, Fabric
+import util
 import os
 
 script_directory = os.path.dirname(os.path.realpath(__file__))

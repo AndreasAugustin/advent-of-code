@@ -19,7 +19,9 @@ setup(
     keywords="advent-of-code python",
     license="MIT",
     url="https://github.com/AndreasAugustin/advent-of-code",
-    packages=find_packages(exclude=['contrib', 'docs']),
+    packages=find_packages('aoc'),
+    package_dir={'': 'aoc'},
+    py_modules=[splitext(basename(path))[0] for path in glob('aoc/*.py')],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: AdventOfCode",

@@ -13,7 +13,7 @@ install-requirements:  ## install python requirements
 
 .PHONY: clean
 clean:  ## cleans the project locally
-	python3 setup,py clean
+	python3 setup.py clean
 
 .PHONY: build
 build:  ## builds the project locally
@@ -21,7 +21,7 @@ build:  ## builds the project locally
 
 .PHONY: run
 run: build  ## run the day set in main.py
-	python3 build/lib/__main__.py $(DAY)
+	python3 aoc/__init__.py $(DAY)
 
 .PHONY: check
 check:  ## run linter

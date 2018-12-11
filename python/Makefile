@@ -21,7 +21,7 @@ build:  ## builds the project locally
 
 .PHONY: run
 run: build  ## run the day set in main.py
-	python3 aoc/__init__.py $(DAY)
+	python3 build/lib/__init__.py $(DAY)
 
 .PHONY: check
 check:  ## run linter
@@ -32,9 +32,9 @@ test:  ## run the tests
 	python3 setup.py pytest
 
 .PHONY: install
-install: build  test ## install the lib
+install: clean build test ## install the lib
 	python3 setup.py install
 
 .PHONY: package
-package: build test ## build package
+package: clean build test ## build package
 	python3 setup.py sdist

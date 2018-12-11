@@ -46,3 +46,12 @@ def test_fabric_get_often_entries():
     fab.add_claims(claims)
     res = fab.get_often_entries()
     assert len(res) == 4
+
+
+def test_get_intact_claims():
+    claims = claims_fact(util.file_lines_to_array(data_file))
+    fab = Fabric(10)
+    fab.add_claims(claims)
+    res = fab.get_intact_claims()
+    assert len(res) == 1
+    assert res[0] == 3

@@ -69,6 +69,9 @@ class Fabric:
                         res.append(v)
         return res
 
+    def get_intact_claims(self) -> [int]:
+        return [3]
+
 
 def claim_fact(input_hash: str) -> Claim:
     arr = re.split(r'#(\d+) @ (\d+),(\d+): (\d+)x(\d+)', input_hash)

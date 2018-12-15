@@ -9,10 +9,6 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-#datadir = os.path.join('..', 'data')
-#datafiles = [(d, [os.path.join(d, f) for f in files])
-#             for d, folders, files in os.walk(datadir)]
-
 setup(
     name="advent-of-code-2018",
     version="0.1.0",
@@ -43,7 +39,4 @@ setup(
         'Advent of code': 'https://adventofcode.com/',
         'Source': 'https://github.com/AndreasAugustin/advent-of-code"',
     },
-    #data_files=datafiles,
-    #include_package_data=True,
-    #package_data={'data': ['../data/*']},
 )
